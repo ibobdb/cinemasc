@@ -1,0 +1,43 @@
+.navbar {
+  background-color: none;
+  height: 75px;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: ease 1s;
+}
+
+.navbar-light {
+  background-color: none;
+}
+
+.navbar-dark {
+  background-color: #000;
+  transition: ease 1s;
+}
+
+.navbar-brand {
+  /* background-color: red; */
+  width: 15%;
+}
+
+.navbar-brand img {
+  width: 60%;
+}
+
+.nav-list {
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* .nav-icon-fav::after {
+  content: "12";
+  font-size: 9px;
+  top: -15px;
+  left: -7px;
+  position: relative;
+  letter-spacing: -1px;
+} */
