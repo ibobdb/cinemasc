@@ -19,8 +19,6 @@ body {
   padding: 10px 5px;
 }
 
-/* WebKit */
-
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -33,7 +31,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: rgba(240, 240, 240, 0.5);
   border-radius: 15px;
-  /* border: 1px solid red; */
 }
 
 @media (max-width: 768px) {

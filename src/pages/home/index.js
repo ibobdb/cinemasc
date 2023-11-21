@@ -1,14 +1,11 @@
-// import { Container } from "react-bootstrap";
 import "./style.css";
 import SectionHeader from "../../components/sectionHeader";
 import Card from "../../components/card";
 import Axios from "axios";
 import Cookies from "js-cookie";
-// import Api from "../../config/apiConfig";
 import { useState, useEffect } from "react";
 export default function Home() {
   const authentication = Cookies.get("sessionId");
-
   const [dataPlayingList, setPlayingList] = useState([]);
   const [dataTopRated, setTopRated] = useState([]);
   const options = {

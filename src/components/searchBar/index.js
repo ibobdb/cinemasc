@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import "./style.css";
 export default function SearchBar() {
-  // https://api.themoviedb.org/3/search/movie?query=the god father
   const options = {
     method: "GET",
     headers: {
@@ -53,7 +52,6 @@ export default function SearchBar() {
       </div>
       <div className={`search-results ${inputValue ? "show" : ""}`}>
         <small className="text-muted">Your results </small>
-
         {dataResult.map((item) => {
           return (
             <li className="mb-2" key={item.id}>

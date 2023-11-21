@@ -18,7 +18,6 @@
 }
 
 .navbar-brand {
-  /* background-color: red; */
   width: 15%;
 }
 
@@ -32,15 +31,6 @@
   font-size: 14px;
   letter-spacing: 2px;
 }
-
-/* .nav-icon-fav::after {
-  content: "12";
-  font-size: 9px;
-  top: -15px;
-  left: -7px;
-  position: relative;
-  letter-spacing: -1px;
-} */
 
 @media (max-width: 768px) {
   .nav-list {

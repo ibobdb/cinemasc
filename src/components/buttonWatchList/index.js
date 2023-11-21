@@ -22,9 +22,7 @@ export default function ButtonwWatchList(props) {
         data
       );
       setBtnStat(btnStat ? false : true);
-    } catch (error) {
-      // console.log(error);
-    }
+    } catch (error) {}
   };
   const handleButton = async (id) => {
     try {
@@ -35,9 +33,7 @@ export default function ButtonwWatchList(props) {
       if (data == true) {
         setBtnStat(true);
       }
-    } catch (error) {
-      // console.error("Error:", error);
-    }
+    } catch (error) {}
   };
   useEffect(() => {
     handleButton(props.movieId);

@@ -16,7 +16,6 @@ export default function Card(props) {
     <div className="card" onClick={handleCardClick}>
       <div className="overlay"></div>
       <div className="card-body w-100 p-0 pe-auto">
-        {/* IMG PATH */}
         <img src={props.img} alt="" className="img-fluid w-100" />
         <div className="desc-wrapper">
           <div className="action-group d-flex float-end gap-2 p-2">

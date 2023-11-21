@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 export default function ButtonFavorite(props) {
   const authentication = Cookies.get("sessionId");
   const navigate = useNavigate();
-  // Simpan ID kedalam
+
   const [btnStat, setBtnStat] = useState(false);
   const handleFavoriteButton = async (evt) => {
     evt.stopPropagation();
@@ -25,9 +25,7 @@ export default function ButtonFavorite(props) {
         data
       );
       setBtnStat(btnStat ? false : true);
-    } catch (error) {
-      // console.log(error);
-    }
+    } catch (error) {}
   };
   const handleButton = async (id) => {
     try {
@@ -38,9 +36,7 @@ export default function ButtonFavorite(props) {
       if (data == true) {
         setBtnStat(true);
       }
-    } catch (error) {
-      // console.error("Error:", error);
-    }
+    } catch (error) {}
   };
   useEffect(() => {
     handleButton(props.movieId);
@@ -59,7 +55,6 @@ export default function ButtonFavorite(props) {
       ) : (
         <i class="bx bx-star"></i>
       )}
-      {/* <i class="bx bx-star"></i> */}
     </button>
   );
 }

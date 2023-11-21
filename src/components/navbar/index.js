@@ -33,13 +33,10 @@ export default function Mynav() {
         Cookies.remove("sessionId");
         setLogged(false);
       }
-    } catch (error) {
-      // console.log(error);
-    }
+    } catch (error) {}
     console.log(isLogged);
   };
   useEffect(() => {
-    // setLogged(authentication ? true : false);
     console.log(isLogged);
   }, [isLogged]);
   useEffect(() => {

@@ -13,8 +13,6 @@ export default function AuthPage() {
       const response = await Axios.get(
         "https://api.themoviedb.org/3/authentication/token/new?api_key=e0aeccf7276c6d9bb4ca52b4ac96d389"
       );
-      // setToken(response.data.request_token);
-
       return response.data.request_token;
     } catch (error) {
       console.log(error);
@@ -59,7 +57,6 @@ export default function AuthPage() {
       console.log("Generate Session Gagal:" + error);
     }
   };
-  // const getToken = useSelector((state) => state.auth.requestToken);
   const getDetailUser = async (session_id, request_token) => {
     try {
       const response = await Axios.get(

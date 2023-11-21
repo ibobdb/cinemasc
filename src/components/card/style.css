@@ -1,10 +1,7 @@
 .card {
-  /* max-width: 100%!important;
-    min-width: 20% !important; */
   height: auto !important;
   width: 100%;
   border: none !important;
-  /* box-shadow: none; */
   border-radius: 0px !important;
   cursor: pointer;
   overflow: hidden;
@@ -28,14 +25,12 @@
 .card img {
   width: 100%;
   height: auto;
-  /* border-radius: 8px; */
   transition: transform 0.3s ease;
 }
 
 .card .card-movie-title {
   font-weight: 700;
   font-size: 14px;
-  /* letter-spacing: 1px; */
   width: 100%;
   height: 100%;
   white-space: nowrap;
@@ -50,7 +45,6 @@
 }
 
 .action-group {
-  /* position: absolute; */
   visibility: hidden;
   z-index: 99;
 }
@@ -64,7 +58,6 @@
 .card:hover .action-group {
   position: relative;
   transition: ease 1s;
-  /* background-color: red; */
   visibility: visible;
 }
 
