@@ -3,6 +3,7 @@ import "./style.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import Swal from "sweetalert2";
 export default function ButtonFavorite(props) {
   const authentication = Cookies.get("sessionId");
   const navigate = useNavigate();
@@ -24,6 +25,11 @@ export default function ButtonFavorite(props) {
         `https://api.themoviedb.org/3/account/account_id/favorite?api_key=e0aeccf7276c6d9bb4ca52b4ac96d389&session_id=${authentication}`,
         data
       );
+      Swal.fire({
+        title: "Success",
+        text: "Data updated",
+        icon: "success",
+      });
       setBtnStat(btnStat ? false : true);
     } catch (error) {}
   };

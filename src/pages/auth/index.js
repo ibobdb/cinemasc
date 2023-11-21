@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-
 import "./style.css";
 import Axios from "axios";
+import Swal from "sweetalert2";
+
 export default function AuthPage() {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
@@ -34,13 +35,23 @@ export default function AuthPage() {
       if (success) {
         const sessionId = await generateSessionId(getToken);
         Cookies.set("sessionId", sessionId);
-        navigate(`/`, { state: { msg: "Hello from MyComponent!" } });
+        navigate(`/`);
+        Swal.fire({
+          title: "Success",
+          text: "Login Successfully",
+          icon: "success",
+        });
       } else {
         console.log("validasi login gagal");
       }
       setUsername("");
       setPassword("");
     } catch (error) {
+      Swal.fire({
+        title: "Authentication Error",
+        text: "Login Failed",
+        icon: "error",
+      });
       console.log("validasi login gagal:" + error);
     }
   };

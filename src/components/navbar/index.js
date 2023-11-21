@@ -5,7 +5,7 @@ import "./style.css";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import Axios from "axios";
-
+import Swal from "sweetalert2";
 export default function Mynav() {
   const [scrolled, setScrolled] = useState(false);
   const authentication = Cookies.get("sessionId");
@@ -32,6 +32,11 @@ export default function Mynav() {
       if (response) {
         Cookies.remove("sessionId");
         setLogged(false);
+        Swal.fire({
+          title: "Successfully Logged Out",
+          text: "Goodbye!",
+          icon: "success",
+        });
       }
     } catch (error) {}
     console.log(isLogged);

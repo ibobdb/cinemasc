@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import Axios from "axios";
+import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 export default function ButtonwWatchList(props) {
   const authentication = Cookies.get("sessionId");
@@ -21,6 +22,11 @@ export default function ButtonwWatchList(props) {
         `https://api.themoviedb.org/3/account/account_id/watchlist?api_key=e0aeccf7276c6d9bb4ca52b4ac96d389&session_id=${authentication}`,
         data
       );
+      Swal.fire({
+        title: "Success",
+        text: "Data updated",
+        icon: "success",
+      });
       setBtnStat(btnStat ? false : true);
     } catch (error) {}
   };
