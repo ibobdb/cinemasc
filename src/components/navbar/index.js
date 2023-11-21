@@ -57,12 +57,12 @@ export default function Mynav() {
         <SearchBar />
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav-list">
+          <Nav className="ms-auto nav-list ps-2">
             <Nav.Link href="/favorite" className="text-light nav-icon-fav">
-              <i class="bx bx-star fs-5"></i>
+              Favorite List
             </Nav.Link>
             <Nav.Link href="/watch-list" className="text-light">
-              <i class="bx bx-list-ul fs-5"></i>
+              Watch List
             </Nav.Link>
             {isLogged ? (
               <Nav.Link>

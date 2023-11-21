@@ -76,3 +76,24 @@
   text-decoration: none;
   color: #000;
 }
+
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 200px;
+  }
+  .search-results {
+    width: 90%;
+    left: 5%;
+  }
+  .search-results li img {
+    width: 20%;
+    height: 20%;
+  }
+  .search-results .list-desc {
+    font-size: 8px;
+    z-index: 999;
+  }
+  .list-desc .title {
+    font-size: 14px !important;
+  }
+}

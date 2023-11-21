@@ -34,3 +34,19 @@
   /* z-index: 99; */
   /* position: absolute; */
 }
+
+@media (max-width: 768px) {
+  .movie-detail .detail {
+    height: 70%;
+    width: 80%;
+  }
+  .movie-detail .detail img {
+    display: none;
+  }
+  .movie-detail .detail button {
+    padding: 2px 5px;
+  }
+  .movie-detail .overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
